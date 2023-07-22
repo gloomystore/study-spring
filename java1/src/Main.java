@@ -5,6 +5,11 @@ public class Main {
         // Press Alt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
         System.out.printf("Hello and welcome!\n");
+        int a, b, sum;
+        a = 1;
+        b = 1;
+        sum = a + b;
+        System.out.printf(sum+"\n");
 
         // Press Shift+F10 or click the green arrow button in the gutter to run the code.
         for (int i = 1; i <= 5; i++) {
