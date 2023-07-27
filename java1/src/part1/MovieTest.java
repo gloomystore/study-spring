@@ -1,4 +1,4 @@
-package object;
+package part1.object;
 
 public class MovieTest {
     public static void main(String[] args) {

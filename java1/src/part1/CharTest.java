@@ -1,3 +1,5 @@
+package part1;
+
 public class CharTest {
     // 형변환
     public static void main(String[] args) {

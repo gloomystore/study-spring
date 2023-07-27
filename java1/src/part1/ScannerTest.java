@@ -1,3 +1,5 @@
+package part1;
+
 import java.util.Scanner;
 public class ScannerTest {
     // Scanner: 사용자의 문자 입력을 받아주는 기능.

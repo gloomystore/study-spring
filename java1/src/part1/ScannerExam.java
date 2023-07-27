@@ -1,3 +1,5 @@
+package part1;
+
 import java.util.*;
 public class ScannerExam {
     public static void main(String[] args) {

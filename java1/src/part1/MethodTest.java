@@ -1,4 +1,4 @@
-package method;
+package part1.method;
 
 public class MethodTest {
     public static void main(String[] args) {

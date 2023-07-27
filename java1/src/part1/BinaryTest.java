@@ -1,3 +1,5 @@
+package part1;
+
 public class BinaryTest {
     // 2진수, 8진수, 16진수
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package part1;
+
 public class FindAPI {
     public static void main(String[] args) {
         int a = 10;

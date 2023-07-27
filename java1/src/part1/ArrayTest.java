@@ -1,6 +1,4 @@
-package array;
-
-import object.Book;
+package part1.array;
 
 public class ArrayTest {
     public static void main(String[] args) {

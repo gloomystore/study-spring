@@ -1,6 +1,6 @@
-package array;
+package part1.array;
 
-import object.Book;
+import part1.object.Book;
 
 public class ArrayMake {
     public static void main(String[] args) {

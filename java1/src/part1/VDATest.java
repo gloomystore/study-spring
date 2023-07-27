@@ -1,3 +1,5 @@
+package part1;
+
 public class VDATest {
     public static void main(String[] args) {
         //Q.정수 한 개를 저장하기위해서 변수를 선언 하시요
