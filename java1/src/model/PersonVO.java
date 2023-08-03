@@ -17,6 +17,10 @@ public class PersonVO {
         this.age = age;
         this.phone = phone;
     }
+    @Override
+    public String toString(){
+        return this.name + "\t" + this.age + "\t" + this.phone;
+    }
 
     // setter method
     public void setName(String name) {
