@@ -1,3 +1,5 @@
+package part1.object;
+
 import part1.object.Book;
 
 // 책: 제목, 가격, 출판사, 저자, 페이지수, isbn
