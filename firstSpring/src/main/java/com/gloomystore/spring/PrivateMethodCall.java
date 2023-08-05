@@ -1,9 +1,7 @@
 package com.gloomystore.spring;
 
-import java.lang.reflect.*;
-
-public class Main {
-	public static void main(String[] args) throws Exception{
+public class PrivateMethodCall {
+	public static void main(String[] args) throws Exception {
 		//Hello hello = new Hello();
 		// hello.main(); // private라 에러남
 		
