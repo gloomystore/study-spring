@@ -1,5 +1,4 @@
-package com.gloomystore.spring;
-
+package com.example.gloomyspring;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -15,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Handles requests for the application home page.
  */
 @Controller
-// 1. ¿ø°İ È£Ãâ °¡´ÉÇÑ ÇÁ·Î±×·¥À¸·Î µî·Ï
+// 1. ì›ê²© í˜¸ì¶œ ê°€ëŠ¥í•œ í”„ë¡œê·¸ë¨ìœ¼ë¡œ ë“±ë¡
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
@@ -24,7 +23,7 @@ public class HomeController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	// 2. url°ú ¸Ş¼Òµå ¿¬°á (¸ÊÇÎ)
+	// 2. urlê³¼ ë©”ì†Œë“œ ì—°ê²° (ë§µí•‘)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		

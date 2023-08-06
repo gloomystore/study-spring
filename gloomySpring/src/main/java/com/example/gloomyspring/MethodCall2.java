@@ -1,4 +1,4 @@
-package com.gloomystore.spring;
+package com.example.gloomyspring;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,18 +1,18 @@
-package com.gloomystore.spring;
+package com.example.gloomyspring;
 
 public class PrivateMethodCall {
 	public static void main(String[] args) throws Exception {
 		//Hello hello = new Hello();
-		// hello.main(); // private¶ó ¿¡·¯³²
+		// hello.main(); // privateë¼ ì—ëŸ¬ë‚¨
 		
-		// Reflection API»ç¿ëÇÏ¸é ÇØ°á °¡´É
-		// java.lang.reflect ÆĞÅ°Áö
+		// Reflection APIì‚¬ìš©í•˜ë©´ í•´ê²° ê°€ëŠ¥
+		// java.lang.reflect íŒ¨í‚¤ì§€
 		
 		Class HelloClass = Class.forName("com.gloomystore.spring.Hello");
 		Hello hello = (Hello)HelloClass.newInstance();
 		
 		java.lang.reflect.Method main = HelloClass.getDeclaredMethod("main"); 
-		main.setAccessible(true); // privateÀÎ mainÀ» È£Ãâ °¡´ÉÇÏ°Ô ÇÔ
+		main.setAccessible(true); // privateì¸ mainì„ í˜¸ì¶œ ê°€ëŠ¥í•˜ê²Œ í•¨
 		
 		main.invoke(hello); // hello.main()
 		

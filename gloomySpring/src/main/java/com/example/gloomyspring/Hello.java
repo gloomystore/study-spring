@@ -1,14 +1,14 @@
-package com.gloomystore.spring;
+package com.example.gloomyspring;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-// 1. ¿ø°İ È£Ãâ °¡´ÉÇÑ ÇÁ·Î±×·¥À¸·Î µî·Ï
+// 1. ì›ê²© í˜¸ì¶œ ê°€ëŠ¥í•œ í”„ë¡œê·¸ë¨ìœ¼ë¡œ ë“±ë¡
 @Controller
 public class Hello {
 	int iv = 10;
 	static int cv = 20;
-	// 2. url°ú ¸Ş¼Òµå¸¦ ¿¬°á
+	// 2. urlê³¼ ë©”ì†Œë“œë¥¼ ì—°ê²°
 	@RequestMapping("/hello")
 	private void main() {
 		System.out.print("hell");
