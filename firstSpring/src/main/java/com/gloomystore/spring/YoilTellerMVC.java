@@ -1,36 +1,46 @@
 package com.gloomystore.spring;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Calendar;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class YoilTellerMVC {
-    // http://192.168.0.144:8081/getYoil?year=2022&month=11&day=12
-    @RequestMapping("/getYoilMVC")
-    public void getYoil(int year, int month, int day, HttpServletResponse res) throws IOException {
-        String result = GoYoil(year, month, day);
+    @RequestMapping("/getYoilMVC") // http://localhost/ch2/getYoilMVC
+    public String main(int year, int month, int day, Model model) {
 
-        res.setContentType("text/html");
-        res.setCharacterEncoding("UTF-8");
-        PrintWriter out = res.getWriter();
-        out.println(result);
+        // 1. 유효성 검사
+        if(!isValid(year, month, day))
+            return "yoilError";  // 유효하지 않으면, /WEB-INF/views/yoilError.jsp로 이동
+
+        // 2. 처리
+        char yoil = getYoil(year, month, day);
+
+        // 3. Model에 작업 결과 저장
+        model.addAttribute("year", year);
+        model.addAttribute("month", month);
+        model.addAttribute("day", day);
+        model.addAttribute("yoil", yoil);
+
+        // 4. 작업 결과를 보여줄 View의 이름을 반환
+        return "yoil"; // /WEB-INF/views/yoil.jsp
     }
 
-    public String GoYoil(int year, int month, int day) {
+    private char getYoil(int year, int month, int day) {
         Calendar cal = Calendar.getInstance();
         cal.set(year, month - 1, day);
 
-        int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK); // 1:일요일, 2:월요일...
-        char yoil = " 일월화수목금토".charAt(dayOfWeek);
+        int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
+        return " 일월화수목금토".charAt(dayOfWeek);
+    }
 
-        // 결과 문자열 생성
-        String result = year + "년 " + month + "월 " + day + "일 " + yoil + "요일입니다. ";
-        return result;
+    private boolean isValid(int year, int month, int day) {
+        if(year==-1 || month==-1 || day==-1)
+            return false;
+
+        return (1<=month && month<=12) && (1<=day && day<=31); // 간단히 체크
     }
 }
