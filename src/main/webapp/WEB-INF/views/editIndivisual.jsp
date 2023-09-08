@@ -23,10 +23,10 @@
 	<meta property="og:url" content="https://www.gloomy-store.com">
 	<link rel="apple-touch-icon" href="/logo192.png">
 	<meta name="next-head-count" content="19">
-	<link rel="stylesheet" href="/css/reset.css">
-	<link rel="stylesheet" href="/css/globals.css">
-	<script defer src="/libs/script.js"></script>
-	<script src="/libs/jquery-3.7.0.min.js"></script>
+	<link rel="stylesheet" href="http://spring.gloomy-store.com/resources/css/reset.css">
+	<link rel="stylesheet" href="http://spring.gloomy-store.com/resources/css/globals.css">
+	<script defer src="http://spring.gloomy-store.com/resources/libs/script.js"></script>
+	<script src="http://spring.gloomy-store.com/resources/libs/jquery-3.7.0.min.js"></script>
 </head>
 
 <body>
